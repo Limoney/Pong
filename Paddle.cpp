@@ -1,6 +1,6 @@
 #include "Paddle.h"
 
-int h = 20, w = 50;//BIEDA lol
+int h = 20, w = 50;
 
 Paddle::Paddle(int x, int y)
 {
