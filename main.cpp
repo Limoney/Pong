@@ -8,7 +8,7 @@ void FillMap();
 void DrawMap();
 void setup();
 void run();
-void Delay(double miliseconds);
+
 
 int rows = 20, cols = 50;
 
@@ -22,12 +22,9 @@ Paddle paddleR(cols-2, 10);
 
 int main()
 {
-	///
-	///OGARNAC KOLIZJE Z BOKU
-	///
+	
 	setup();
 	run();
-	//Delay(10000);
 	std::cout << "over";
 	system("pause");
 	return 0;
@@ -81,21 +78,12 @@ void run()
 {
 	while (true)
 	{
-		
 		puck.Update(map, paddleL, paddleR);
 		paddleR.Update(map);
 		paddleL.Update(map);
-		//std::cout << rand() % 4 << std::endl;
-		
 
 		DrawMap();
 		Sleep(130);
 		system("cls");
 	}
-}
-
-void Delay(double miliseconds)
-{
-	clock_t koniec = clock() + miliseconds * CLOCKS_PER_SEC / 1000.0;
-	while (clock() < koniec) continue;
 }
